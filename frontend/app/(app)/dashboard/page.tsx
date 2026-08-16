@@ -31,7 +31,7 @@ function StatTile({
   icon: typeof Flame;
 }) {
   return (
-    <div className="min-w-0 rounded-[8px] border border-line bg-surface px-4 py-3">
+    <div className="min-w-0 rounded-[12px] border border-line bg-surface px-4 py-3">
       <div className="flex items-center gap-1.5">
         <Icon size={12} className="text-muted" strokeWidth={1.75} />
         <p className="truncate text-[12px] text-muted">{label}</p>

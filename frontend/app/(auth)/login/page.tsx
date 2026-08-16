@@ -55,7 +55,7 @@ export default function LoginPage() {
         </Button>
         <p className="text-[14px] text-muted">
           No account?{" "}
-          <Link href="/register" className="text-[#147A52] hover:underline">
+          <Link href="/register" className="text-emerald hover:underline">
             Register
           </Link>
         </p>

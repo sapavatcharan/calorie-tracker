@@ -4,11 +4,11 @@ export const CHART = {
   protein: "#C43E5A",
   carbs: "#DE9A2C",
   fat: "#4E63C6",
-  emerald: "#147A52",
-  emeraldSoft: "#E7F1EB",
-  grid: "#E5E7EB",
-  ink: "#171717",
-  muted: "#737373",
+  emerald: "#9B2D5E",
+  emeraldSoft: "#F6E6EC",
+  grid: "#ECE0E2",
+  ink: "#251019",
+  muted: "#7C6A70",
 };
 
 export const chartAxis = {

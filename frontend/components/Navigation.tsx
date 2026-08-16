@@ -40,10 +40,19 @@ function NavLink({
   return (
     <Link
       href={href}
-      className={`flex h-9 items-center gap-2 rounded-[8px] px-2 text-[13px] ${
+      className={`relative flex h-9 items-center gap-2 rounded-[8px] px-2 text-[13px] ${
         compact ? "h-12 flex-col justify-center gap-0.5 px-1 text-[10px] leading-tight" : ""
-      } ${active ? "bg-inset font-medium text-ink" : "text-muted hover:bg-inset hover:text-ink"}`}
+      } ${
+        active
+          ? compact
+            ? "font-medium text-emerald"
+            : "bg-emerald-soft font-medium text-emerald-ink"
+          : "text-muted hover:bg-inset hover:text-ink"
+      }`}
     >
+      {active && !compact ? (
+        <span className="absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-emerald" aria-hidden />
+      ) : null}
       <Icon className="shrink-0 text-current" size={compact ? 16 : 16} strokeWidth={1.75} />
       <span className={compact ? "max-w-full text-center leading-tight" : ""}>{label}</span>
     </Link>
@@ -56,7 +65,7 @@ export function Navigation() {
 
   return (
     <>
-      <aside className="hidden w-52 shrink-0 border-r border-line bg-surface md:flex md:min-h-screen md:flex-col">
+      <aside className="hidden w-52 shrink-0 border-r border-line bg-sidebar md:flex md:min-h-screen md:flex-col">
         <div className="border-b border-line px-4 py-4">
           <BrandLockup href="/dashboard" />
         </div>
@@ -67,7 +76,7 @@ export function Navigation() {
         </nav>
         <div className="border-t border-line px-3 py-4">
           <div className="flex items-center gap-2">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-inset text-[11px] font-medium text-ink">
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-soft text-[11px] font-medium text-emerald-ink">
               {(user?.name?.trim()?.[0] || user?.email?.[0] || "P").toUpperCase()}
             </span>
             <p className="truncate text-[12px] text-muted">{user?.email}</p>

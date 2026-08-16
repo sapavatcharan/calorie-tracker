@@ -14,7 +14,7 @@ function barWidth(actual: number, goal?: number | null) {
 
 function GoalBar({ width, fill }: { width: number; fill: string }) {
   return (
-    <div className="mt-1 h-1.5 w-full rounded-[4px] bg-[#E5E7EB]">
+    <div className="mt-1 h-1.5 w-full rounded-[4px] bg-line">
       <div className={`h-full rounded-[4px] ${fill}`} style={{ width: `${width}%` }} />
     </div>
   );
@@ -85,7 +85,7 @@ export function NutritionFacts({
             )}
           </div>
         </div>
-        <GoalBar width={barWidth(calories, calorieGoal)} fill={calOver ? "bg-[#C43E5A]" : "bg-[#147A52]"} />
+        <GoalBar width={barWidth(calories, calorieGoal)} fill={calOver ? "bg-[#C43E5A]" : "bg-emerald"} />
       </div>
       <div className="rule-medium" />
       <p className="py-1.5 text-right text-[11px] uppercase tracking-[0.08em] text-muted">% of goal</p>

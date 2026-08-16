@@ -1,9 +1,9 @@
 "use client";
 
+import { Landing } from "@/components/Landing";
 import { useAuth } from "@/lib/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { LoadingState } from "@/components/ui/EmptyState";
 
 export default function HomePage() {
   const { user, isLoading } = useAuth();
@@ -11,8 +11,8 @@ export default function HomePage() {
 
   useEffect(() => {
     if (isLoading) return;
-    router.replace(user ? "/dashboard" : "/login");
+    if (user) router.replace("/dashboard");
   }, [isLoading, user, router]);
 
-  return <LoadingState />;
+  return <Landing />;
 }

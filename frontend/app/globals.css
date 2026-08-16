@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #171717;
-  --paper: #fafafa;
+  --ink: #251019;
+  --paper: #fbf4f1;
   --surface: #ffffff;
-  --line: #e5e7eb;
-  --muted: #737373;
-  --emerald: #147a52;
-  --emerald-ink: #0c5236;
-  --emerald-soft: #e7f1eb;
+  --sidebar: #f6eeef;
+  --line: #ece0e2;
+  --muted: #7c6a70;
+  --emerald: #9b2d5e;
+  --emerald-ink: #7e2450;
+  --emerald-soft: #f6e6ec;
   --protein: #c43e5a;
   --protein-soft: #f8e8ec;
   --carbs: #de9a2c;
   --carbs-soft: #f8eed9;
   --fat: #4e63c6;
   --fat-soft: #e8ebf8;
-  --inset: #f5f5f5;
-  --amber-soft: #f8eed9;
+  --inset: #f6eeef;
+  --amber-soft: #f6e6ec;
   --font-display: var(--font-bricolage);
   --font-sans: var(--font-hanken);
   --font-mono: var(--font-jetbrains);
@@ -26,6 +27,7 @@
   --color-ink: var(--ink);
   --color-paper: var(--paper);
   --color-surface: var(--surface);
+  --color-sidebar: var(--sidebar);
   --color-line: var(--line);
   --color-muted: var(--muted);
   --color-emerald: var(--emerald);
@@ -42,7 +44,7 @@
   --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
-  --radius-card: 8px;
+  --radius-card: 12px;
   --radius-control: 8px;
 }
 
@@ -77,7 +79,7 @@ h4 {
 }
 
 ::selection {
-  background: #e5e7eb;
+  background: var(--emerald-soft);
   color: var(--ink);
 }
 
@@ -100,7 +102,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #d4d4d4 transparent;
+  scrollbar-color: #e0d0d4 transparent;
 }
 
 *::-webkit-scrollbar {
@@ -109,7 +111,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #d4d4d4;
+  background: #e0d0d4;
   border-radius: 8px;
 }
 
@@ -135,7 +137,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .skeleton {
-  background: linear-gradient(90deg, #f5f5f5 0%, #ececec 50%, #f5f5f5 100%);
+  background: linear-gradient(90deg, var(--inset) 0%, var(--line) 50%, var(--inset) 100%);
   background-size: 200% 100%;
   animation: shimmer 1.2s ease-in-out infinite;
 }

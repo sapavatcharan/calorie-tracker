@@ -4,7 +4,7 @@ import { APP_NAME } from "@/lib/brand";
 export function BrandMark({ size = 20 }: { size?: number }) {
   return (
     <span
-      className="inline-flex shrink-0 items-center justify-center rounded-[6px] bg-[#147A52] text-white"
+      className="inline-flex shrink-0 items-center justify-center rounded-[6px] bg-emerald text-white"
       style={{ width: size, height: size }}
       aria-hidden
     >
