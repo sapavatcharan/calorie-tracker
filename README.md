@@ -144,3 +144,7 @@ All routes except register, login, and `/health` require `Authorization: Bearer 
 ## Testing
 
 The backend suite is 45 Vitest tests across 13 files: auth, meals, goals, weight, reports, pagination, date-range parsing, PDF import, Gemini output validation, chat tool-calling (mocked), and quota/fallback behavior. Controllers are exercised through Supertest against the Express app (no `listen` in tests).
+
+## License
+
+MIT
