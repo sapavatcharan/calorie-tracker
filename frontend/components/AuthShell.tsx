@@ -22,8 +22,8 @@ function MiniLabel() {
 
 export function AuthShell({ children }: { children: ReactNode }) {
   return (
-    <div className="relative min-h-screen md:grid md:grid-cols-2">
-      <div className="border-b border-line bg-paper px-6 py-8 md:flex md:flex-col md:justify-center md:border-b-0 md:border-r md:px-12">
+    <div className="auth-shell relative min-h-screen md:grid md:grid-cols-2">
+      <div className="border-b border-line px-6 py-8 md:flex md:flex-col md:justify-center md:border-b-0 md:border-r md:px-12">
         <BrandLockup />
         <p className="mt-3 max-w-sm text-[14px] text-muted">{APP_TAGLINE}</p>
         <ul className="mt-6 space-y-2 text-[13px] text-ink">
@@ -38,7 +38,7 @@ export function AuthShell({ children }: { children: ReactNode }) {
           <MiniLabel />
         </div>
       </div>
-      <div className="flex items-center justify-center bg-paper px-4 py-10 md:px-8">{children}</div>
+      <div className="flex items-center justify-center px-4 py-10 md:px-8">{children}</div>
     </div>
   );
 }

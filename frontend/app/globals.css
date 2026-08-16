@@ -163,6 +163,45 @@ body {
   }
 }
 
+/* Auth pages: same hero meal photo as landing, with a cream/berry veil for copy */
+.auth-shell {
+  isolation: isolate;
+  background-color: var(--paper);
+  background-image: url("/hero-healthy-meal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.auth-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(241, 236, 237, 0.86) 0%,
+    rgba(246, 230, 236, 0.82) 48%,
+    rgba(241, 236, 237, 0.88) 100%
+  );
+}
+
+.auth-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 375px) {
+  .auth-shell::before {
+    background: linear-gradient(
+      180deg,
+      rgba(241, 236, 237, 0.92) 0%,
+      rgba(246, 230, 236, 0.9) 100%
+    );
+  }
+}
+
 .card {
   background-color: var(--surface);
   box-shadow:
