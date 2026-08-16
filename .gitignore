@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+frontend/.next/
+frontend/out/
+coverage/
+*.tsbuildinfo
+
+# env (never commit secrets)
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# logs / OS
+*.log
+.DS_Store
+
+# generated Prisma client (if emitted under src)
+backend/src/generated/
+
+# editor / agent tooling (recreated locally)
+.cursor/
+.idea/
+*.swp
+frontend/CLAUDE.md
+frontend/AGENTS.md
+
+# local scratch
+.tmp-shots/
+docs/

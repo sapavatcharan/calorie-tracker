@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: calorie
+      POSTGRES_PASSWORD: calorie
+      POSTGRES_DB: calorie_tracker
+    ports:
+      - "5433:5432"
+    volumes:
+      - calorie_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U calorie -d calorie_tracker"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  calorie_pg:
