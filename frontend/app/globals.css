@@ -82,6 +82,8 @@ body {
 .landing-hero {
   position: relative;
   isolation: isolate;
+  min-height: 28rem;
+  overflow: hidden;
   background-color: var(--paper);
   background-image: url("/hero-healthy-meal.jpg");
   background-size: cover;
@@ -97,9 +99,9 @@ body {
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(247, 246, 242, 0.88) 0%,
-    rgba(255, 255, 255, 0.84) 45%,
-    rgba(247, 246, 242, 0.86) 100%
+    rgba(247, 246, 242, 0.52) 0%,
+    rgba(255, 255, 255, 0.42) 42%,
+    rgba(247, 246, 242, 0.58) 100%
   );
 }
 
@@ -109,11 +111,15 @@ body {
 }
 
 @media (max-width: 640px) {
+  .landing-hero {
+    min-height: 22rem;
+  }
+
   .landing-hero::before {
     background: linear-gradient(
       180deg,
-      rgba(247, 246, 242, 0.9) 0%,
-      rgba(255, 255, 255, 0.88) 100%
+      rgba(247, 246, 242, 0.62) 0%,
+      rgba(255, 255, 255, 0.52) 100%
     );
   }
 }
@@ -128,16 +134,22 @@ body {
 .app-shell::before {
   content: "";
   position: fixed;
-  inset: -16px;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-color: #f7f6f2;
   background-image: url("/app-bg-produce.jpg"), url("/app-bg-bowl.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
-  background-position: 18% 42%, 82% 58%;
-  filter: blur(10px);
-  opacity: 0.1;
+  background-size: 62% auto, 54% auto;
+  background-position: left 38%, right 68%;
+}
+
+.app-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: rgba(247, 246, 242, 0.62);
 }
 
 .app-shell > * {
@@ -146,9 +158,8 @@ body {
 }
 
 @media (max-width: 375px) {
-  .app-shell::before {
-    filter: blur(12px);
-    opacity: 0.06;
+  .app-shell::after {
+    background: rgba(247, 246, 242, 0.72);
   }
 }
 
