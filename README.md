@@ -1,5 +1,8 @@
 # Plate — Personal Calorie Tracker
 
+**🎥 Demo video:** https://youtu.be/kLNccYMfJGI
+
+
 A full-stack app for logging meals, tracking daily nutrition goals, and reviewing progress over time.
 
 Plate lets you record food by meal type (breakfast, lunch, dinner, snacks), set calorie and macro targets, and see how intake compares to those targets. Photos of plates or nutrition labels can be sent through Gemini for a suggested nutrition breakdown that you can edit before saving. The API and the Next.js client are separate services; all data is persisted in PostgreSQL.
