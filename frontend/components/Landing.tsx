@@ -90,7 +90,7 @@ function ExamplePreview() {
 
 export function Landing() {
   return (
-    <div className="min-h-screen bg-paper text-ink">
+    <div className="landing-page min-h-screen text-ink">
       <header className="border-b border-line bg-paper/90 backdrop-blur-sm">
         <div className="mx-auto flex min-h-14 w-full max-w-[1120px] items-center justify-between gap-2 px-4 py-2 md:px-6">
           <span className="md:hidden">
@@ -114,32 +114,36 @@ export function Landing() {
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-[1120px] px-4 pb-16 pt-10 md:px-6 md:pt-16">
-        <section className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
-          <div>
-            <h1 className="font-display text-[28px] font-semibold tracking-[-0.03em] text-ink sm:text-[40px]">
-              {APP_TAGLINE}
-            </h1>
-            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-muted">
-              Log meals in seconds, set daily goals, and see your progress — with AI photo logging and a chat
-              assistant.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-2">
-              <Link href="/register">
-                <Button type="button" className="min-w-[8.5rem]">
-                  Get started
-                </Button>
-              </Link>
-              <Link href="/login">
-                <Button type="button" variant="secondary" className="min-w-[8.5rem]">
-                  Sign in
-                </Button>
-              </Link>
+      <section className="landing-hero" aria-label="Hero">
+        <div className="landing-hero-inner mx-auto w-full max-w-[1120px] px-4 pt-10 md:px-6 md:pt-16">
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
+            <div>
+              <h1 className="font-display text-[28px] font-semibold tracking-[-0.03em] text-ink sm:text-[40px]">
+                {APP_TAGLINE}
+              </h1>
+              <p className="mt-4 max-w-md text-[15px] leading-relaxed text-muted">
+                Log meals in seconds, set daily goals, and see your progress — with AI photo logging and a chat
+                assistant.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <Link href="/register">
+                  <Button type="button" className="min-w-[8.5rem]">
+                    Get started
+                  </Button>
+                </Link>
+                <Link href="/login">
+                  <Button type="button" variant="secondary" className="min-w-[8.5rem]">
+                    Sign in
+                  </Button>
+                </Link>
+              </div>
             </div>
+            <ExamplePreview />
           </div>
-          <ExamplePreview />
-        </section>
+        </div>
+      </section>
 
+      <main className="mx-auto w-full max-w-[1120px] px-4 pb-16 md:px-6">
         <section className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
             <Card key={f.title} className="p-4">

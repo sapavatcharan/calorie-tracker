@@ -7,5 +7,5 @@ export function Card({
   className?: string;
   accent?: "emerald" | "protein" | "carbs" | "fat";
 }) {
-  return <div className={`rounded-[12px] border border-line bg-surface p-5 ${className}`}>{children}</div>;
+  return <div className={`card rounded-[12px] border border-line bg-surface p-5 ${className}`}>{children}</div>;
 }

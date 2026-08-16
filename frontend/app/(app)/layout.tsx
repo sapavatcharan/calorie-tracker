@@ -6,7 +6,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <ProtectedRoute>
-      <div className="min-h-screen md:flex">
+      <div className="app-shell min-h-screen md:flex">
         <Navigation />
         <div className="min-w-0 flex-1">
           <main className="mx-auto w-full max-w-[1120px] px-4 pb-24 pt-6 md:px-6 md:pb-8">
